@@ -67,6 +67,9 @@ p{
   font-size: 11px;
   color: var(--primary-container-color);
   font-weight: 600;
+  /* width: 90%; */
+}
+.icons p{
   width: 90%;
 }
 .dashboard-header{
