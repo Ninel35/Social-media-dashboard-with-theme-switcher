@@ -40,11 +40,18 @@ h5{
   font-size: 1.5rem;
 }
 button{
-  width: 32px;
+  width: 35px;
   height: 18px;
- border-radius: 7px;
+ border-radius: 10px;
  background-color:  hsl(230, 22%, 74%);
  border: 0px;
+}
+
+@media screen and (min-width: 768px){
+  button{
+    width: 40px;
+    height: 20px;
+  }
 }
 li{
   padding: 15px;
@@ -62,7 +69,9 @@ li{
   li{
     width: 80%;
     margin: auto;
+    margin-bottom: 20px;
     height: 150px;
+    padding-bottom: 0;
   }
 }
 
@@ -105,9 +114,15 @@ p{
   width: 90%;
 }
 .dashboard-header{
-  border-bottom: 1.5px solid hsl(228, 12%, 44%);
+  border-bottom: 1.2px solid hsl(228, 12%, 44%);
   padding-bottom: 15px;
   margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px){
+  .dashboard-header{
+    border-bottom: 0;
+  }
 }
 
 .count-views{
@@ -120,16 +135,25 @@ p{
 
  .main-container{
  width: min(320px, 90%);
- margin-right: auto;
- margin-left: auto;
- margin-top: 30px;
+ /* margin-right: auto; */
+ /* margin-left: auto; */
+ /* margin-top: 30px; */
+ margin: auto;
 }
 .wrapper-btn{
 display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 25px;
-
 }
+
+@media screen and (min-width: 768px){
+  .wrapper-btn{
+    gap: 30px;
+  
+  }
+}
+
 .social-link{
   color: blueviolet;
 }
@@ -149,14 +173,13 @@ display: flex;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 }
 
 .wrapper-icon-view {
   height: 100px;
 }
-
-
 
 .icon-social{
      display: flex;
