@@ -6,22 +6,36 @@
   --primary-header-color: hsl(230, 17%, 14%);
 
   --primary-container-color: hsl(228, 12%, 44%);
- 
- --hover-light-card: hsl(227, 47%, 96%);
 
-  --hover-dark-card:  hsl(228, 28%, 20%);
+  --primary-card-color: hsl(225, 100%, 98%);
+
+  --hover-light-card: hsl(227, 47%, 96%);
+
+  --hover-dark-card: hsl(228, 28%, 20%);
 
   --primary-dark-header: hsl(0, 100%, 100%);
+}
+
+.darkmode {
+  --primary-header-color: hsl(0, 100%, 100%);
+
+  --primary-background-color: hsl(230, 17%, 14%);
+
+  --primary-card-color: hsl(228, 28%, 20%);
+  --primary-hover-color: hsl(228, 28%, 20%);
 }
 
 body {
   font-family: "Roboto", sans-serif;
   min-height: 100vh;
   color: var(--primary-header-color);
+  background-color: var(--primary-background-color);
 }
+
 h1 {
   font-size: 1.5rem;
 }
+
 h2 {
   font-size: 1.1rem;
   color: var(--primary-container-color);
@@ -29,20 +43,25 @@ h2 {
   margin-top: 30px;
   margin-bottom: 20px;
 }
+
 @media screen and (min-width: 768px) {
   h2 {
     margin-left: 13px;
   }
 }
+
 h4 {
   font-weight: 400;
   color: var(--primary-container-color);
 }
+
 h5 {
   font-weight: 900;
   font-size: 1.5rem;
 }
+
 button {
+  cursor: pointer;
   width: 35px;
   height: 18px;
   border-radius: 10px;
@@ -56,18 +75,19 @@ button {
     height: 20px;
   }
 }
+
 li {
+  cursor: pointer;
   padding: 15px;
   /* padding-bottom: 18px; */
-  background-color: hsl(225, 100%, 98%);
+  background-color: var(--primary-card-color);
   margin-bottom: 20px;
   text-align: center;
   width: 90%;
   height: 130px;
-
   border-radius: 0.5rem;
 }
-li:hover{
+li:hover {
   background-color: var(--hover-light-card);
 }
 
@@ -92,7 +112,6 @@ ul {
   ul {
     /* border: 1px solid; */
     margin-top: 1.5rem;
-    /* display: flex; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
   }
@@ -114,7 +133,6 @@ p {
   font-size: 11px;
   color: var(--primary-container-color);
   font-weight: 600;
-  /* width: 90%; */
 }
 .icons p {
   width: 90%;
@@ -141,10 +159,8 @@ p {
 
 .main-container {
   width: min(320px, 90%);
-  /* margin-right: auto; */
-  /* margin-left: auto; */
-  /* margin-top: 30px; */
   margin: auto;
+ 
 }
 .wrapper-btn {
   display: flex;
@@ -159,9 +175,6 @@ p {
   }
 }
 
-.social-link {
-  color: blueviolet;
-}
 @media screen and (min-width: 768px) {
   .main-container {
     min-width: 90%;
