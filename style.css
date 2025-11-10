@@ -11,8 +11,6 @@
 
   --hover-light-card: hsl(227, 47%, 96%);
 
-  --hover-dark-card: hsl(228, 28%, 20%);
-
   --primary-dark-header: hsl(0, 100%, 100%);
 }
 
@@ -22,7 +20,7 @@
   --primary-background-color: hsl(230, 17%, 14%);
 
   --primary-card-color: hsl(228, 28%, 20%);
-  --primary-hover-color: hsl(228, 28%, 20%);
+  --hover-light-card: hsl(230, 22%, 74%);
 }
 
 body {
@@ -123,7 +121,15 @@ ul {
   border-top: 5px solid hsl(203, 89%, 53%);
 }
 .social-border-red {
-  border-top: 5px solid hsl(356, 69%, 56%);
+  border-top-width: 6px;
+  border-top-style: solid;
+  border-image: linear-gradient(
+      90deg,
+      hsl(37, 97%, 70%),
+      hsl(5, 77%, 71%),
+      hsl(329, 70%, 58%)
+    )
+    1;
 }
 span {
   font-size: 2.5rem;
@@ -139,6 +145,7 @@ p {
 }
 .dashboard-header {
   border-bottom: 1.2px solid hsl(228, 12%, 44%);
+
   padding-bottom: 15px;
   margin-bottom: 15px;
 }
@@ -160,7 +167,6 @@ p {
 .main-container {
   width: min(320px, 90%);
   margin: auto;
- 
 }
 .wrapper-btn {
   display: flex;
