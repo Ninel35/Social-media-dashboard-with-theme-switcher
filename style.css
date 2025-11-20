@@ -15,6 +15,12 @@
 
   --background-toggle-checked: #fff;
   --background-color-darkmode: hsl(228, 12%, 44%);
+  --background-color-btn: hsl(228, 12%, 44%);
+  --background-color-active: linear-gradient(
+    to right,
+    hsl(210, 79%, 56%),
+    hsl(146, 68%, 55%)
+  );
 }
 
 .darkmode {
@@ -26,6 +32,16 @@
   --hover-light-card: hsl(232, 33%, 28%);
   --background-toggle-checked: hsl(232, 33%, 28%);
   --background-color-darkmode: #fff;
+  --background-color-btn: linear-gradient(
+    to right,
+    hsl(210, 79%, 56%),
+    hsl(146, 68%, 55%)
+  );
+  --background-color-active: linear-gradient(
+    to right,
+    hsl(210, 79%, 56%),
+    hsl(146, 68%, 55%)
+  );
 }
 
 body {
@@ -33,10 +49,10 @@ body {
   min-height: 100vh;
   color: var(--primary-header-color);
   background-color: var(--primary-background-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -72,38 +88,36 @@ h5 {
 
 .switch input {
   position: absolute;
+  cursor: pointer;
   opacity: 0;
 }
 
 .switch {
-  cursor: pointer;
+  /* cursor: pointer; */
   padding-top: 1.6px;
   padding-left: 1.8px;
-  /* display: inline-block; */
+  display: inline-block;
   font-size: 20px;
   height: 1em;
   width: 2em;
-  background: linear-gradient(to right, hsl(210, 79%, 56%), hsl(146, 68%, 55%));
+  background: var(--background-color-btn);
 
   border-radius: 1em;
 }
 
 .switch div {
+  cursor: pointer;
   height: 0.9em;
   width: 0.9em;
   border-radius: 1em;
   background: var(--background-toggle-checked);
 }
+.switch:hover {
+  background: var(--background-color-active);
+}
 
 .switch input:checked + div {
   transform: translateX(100%);
-}
-
-@media screen and (min-width: 768px) {
-  button {
-    width: 40px;
-    height: 20px;
-  }
 }
 
 li {
