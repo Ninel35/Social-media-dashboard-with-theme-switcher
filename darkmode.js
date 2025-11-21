@@ -4,13 +4,13 @@ const toggleswitch = document.getElementById("btn-toggle");
 const enableDarkmode = () => {
   document.body.classList.add("darkmode");
   localStorage.setItem("darkmode", "active");
-  toggleswitch.checked = true;
+  toggleswitch.checked = false;
 };
 
 const disableDarkmode = () => {
   document.body.classList.remove("darkmode");
   localStorage.setItem("darkmode", null);
-  toggleswitch.checked = false;
+  toggleswitch.checked = true;
 };
 if (localStorage.getItem("darkmode") === "active") {
   enableDarkmode();
@@ -19,5 +19,5 @@ if (localStorage.getItem("darkmode") === "active") {
 }
 
 toggleswitch.addEventListener("change", () => {
-  toggleswitch.checked ? enableDarkmode() : disableDarkmode();
+  toggleswitch.checked ? disableDarkmode() : enableDarkmode();
 });
